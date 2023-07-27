@@ -1,0 +1,12 @@
+cookiebanner:
+  version: VERSION
+  css:
+    theme:
+      css/cookiebanner.css: {}
+  js:
+    js/jquery.cookie-1.4.1.min.js: {}
+    js/cookiebanner.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal.ajax
+    - core/drupalSettings

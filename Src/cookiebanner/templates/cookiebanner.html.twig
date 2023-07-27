@@ -1,0 +1,162 @@
+{% if message.cookieactive1 == true or message.cookieactive2 == true or message.cookieactive3 == true or message.cookieactive4 == true or message.cookieactive5 == true or message.cookieactive6 == true or message.cookieactive7 == true or message.cookieactive8 == true or message.cookieactive9 == true or message.cookieactive10 == true %}
+
+  <div class="cookie-banner-info-hidden">
+      <button type="button">{{ message.openclosebutton|raw }}</button>
+  </div>
+
+  <div class="cookie-banner-popup">
+    
+    <div class="cookie-banner-info">
+      <button type="button">{{ message.openclosebutton|raw }}</button>
+    </div>
+
+    <div class="cookie-banner-content">
+      
+      <div class="cookie-banner-message">
+        <h3>{{ message.informationtitle|raw }}</h3>
+        <p>{{ message.information|raw }}</p>
+        <h3>{{ message.title|raw }}</h3>
+      </div>
+
+      <div class="cookie-banner-categories">
+          
+          {% if message.cookieactive1 == true %}
+            <div class="cookie-banner-category cookie-banner-cookie1">
+              <div>
+                <label class="switch">
+                <input class="input" type="checkbox">
+                <span class="slider round"></span>
+                </label>
+                <label for="">{{message.cookietitle1}}</label>
+              </div>
+              <div class="cookie-banner-category-description">{{message.cookiedescription1}}</div>
+            </div>
+          {% endif %}
+
+          {% if message.cookieactive2 == true %}
+            <div class="cookie-banner-category cookie-banner-cookie2">
+              <div>
+                <label class="switch">
+                <input class="input" type="checkbox">
+                <span class="slider round"></span>
+                </label>
+                <label for="">{{message.cookietitle2}}</label>
+              </div>
+              <div class="cookie-banner-category-description">{{message.cookiedescription2}}</div>
+            </div>
+          {% endif %}
+    
+          {% if message.cookieactive3 == true %}
+            <div class="cookie-banner-category cookie-banner-cookie3">
+              <div>
+                <label class="switch">
+                <input class="input" type="checkbox">
+                <span class="slider round"></span>
+                </label>
+                <label for="">{{message.cookietitle3}}</label>
+              </div>
+              <div class="cookie-banner-category-description">{{message.cookiedescription3}}</div>
+            </div>
+          {% endif %}
+
+          {% if message.cookieactive4 == true %}
+            <div class="cookie-banner-category cookie-banner-cookie4">
+              <div>
+                <label class="switch">
+                <input class="input" type="checkbox">
+                <span class="slider round"></span>
+                </label>
+                <label for="">{{message.cookietitle4}}</label>
+              </div>
+              <div class="cookie-banner-category-description">{{message.cookiedescription4}}</div>
+            </div>
+          {% endif %}
+
+          {% if message.cookieactive5 == true %}
+            <div class="cookie-banner-category cookie-banner-cookie5">
+              <div>
+                <label class="switch">
+                <input class="input" type="checkbox">
+                <span class="slider round"></span>
+                </label>
+                <label for="">{{message.cookietitle5}}</label>
+              </div>
+              <div class="cookie-banner-category-description">{{message.cookiedescription5}}</div>
+            </div>
+          {% endif %}
+
+          {% if message.cookieactive6 == true %}
+            <div class="cookie-banner-category cookie-banner-cookie6">
+              <div>
+                <label class="switch">
+                <input class="input" type="checkbox">
+                <span class="slider round"></span>
+                </label>
+                <label for="">{{message.cookietitle6}}</label>
+              </div>
+              <div class="cookie-banner-category-description">{{message.cookiedescription6}}</div>
+            </div>
+          {% endif %}
+
+          {% if message.cookieactive7 == true %}
+            <div class="cookie-banner-category cookie-banner-cookie7">
+              <div>
+                <label class="switch">
+                <input class="input" type="checkbox">
+                <span class="slider round"></span>
+                </label>
+                <label for="">{{message.cookietitle7}}</label>
+              </div>
+              <div class="cookie-banner-category-description">{{message.cookiedescription7}}</div>
+            </div>
+          {% endif %}
+
+          {% if message.cookieactive8 == true %}
+            <div class="cookie-banner-category cookie-banner-cookie8">
+              <div>
+                <label class="switch">
+                <input class="input" type="checkbox">
+                <span class="slider round"></span>
+                </label>
+                <label for="">{{message.cookietitle8}}</label>
+              </div>
+              <div class="cookie-banner-category-description">{{message.cookiedescription8}}</div>
+            </div>
+          {% endif %}
+
+          {% if message.cookieactive9 == true %}
+            <div class="cookie-banner-category cookie-banner-cookie9">
+              <div>
+                <label class="switch">
+                <input class="input" type="checkbox">
+                <span class="slider round"></span>
+                </label>
+                <label for="">{{message.cookietitle9}}</label>
+              </div>
+              <div class="cookie-banner-category-description">{{message.cookiedescription9}}</div>
+            </div>
+          {% endif %}
+
+          {% if message.cookieactive10 == true %}
+            <div class="cookie-banner-category cookie-banner-cookie10">
+              <div>
+                <label class="switch">
+                <input class="input" type="checkbox">
+                <span class="slider round"></span>
+                </label>
+                <label for="">{{message.cookietitle10}}</label>
+              </div>
+              <div class="cookie-banner-category-description">{{message.cookiedescription10}}</div>
+            </div>
+          {% endif %}
+
+          <div class="cookie-banner-buttons">
+            <button type="button" class="cookie-banner-save">Valider et continuer</button>
+            <button type="button" class="cookie-banner-accept-all">Tout accepter</button>
+            <button type="button" class="cookie-banner-deny-all">Tout refuser</button>
+          </div>
+          
+      </div>
+    </div>
+  </div>
+{% endif %}

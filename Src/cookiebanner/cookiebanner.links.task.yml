@@ -1,0 +1,4 @@
+cookiebanner.cookiebanner_admin_form:
+  title: 'Settings'
+  route_name: cookiebanner.cookiebanner_admin_form
+  base_route: cookiebanner.cookiebanner_admin_form

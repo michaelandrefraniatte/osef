@@ -1,0 +1,12 @@
+127.0.0.1       osef.localhost
+127.0.0.1       vit_sprimut.loc
+127.0.0.1	appelcot.localhost
+127.0.0.1       cartestp.localhost
+127.0.0.1	praeconis.loc
+127.0.0.1	localhost
+127.0.1.1	NCY-LAP-DEV-12
+
+# The following lines are desirable for IPv6 capable hosts
+::1     localhost ip6-localhost ip6-loopback
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters

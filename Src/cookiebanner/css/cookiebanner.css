@@ -1,0 +1,211 @@
+
+  /* Addons */
+  
+  .cookie-banner-popup {
+    background : rgb(255, 254, 254);
+    position: fixed;
+    left: 0px;
+    z-index: 2;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .slider, #wrapper {
+    z-index: 1;
+  }
+
+  .cookie-banner-popup h3 {
+    color:#2196F3 !important;
+  }
+
+  .cookie-banner-content {
+    margin: 0px 50px 50px 50px;
+  }
+
+  .cookie-banner-info {
+    width: 100%;
+    height: 30px;
+    background-color: transparent;
+  }
+
+  .cookie-banner-info button {
+    width: 100%;
+    height: 30px;
+    box-shadow: 0px 0px 0px 2px white inset;
+    border-bottom: 2px solid #2196F3;
+    border-top: 2px solid transparent;
+    text-decoration: none;
+    background: transparent;
+    background-color: transparent;
+    display: inline;
+  }
+
+  .cookie-banner-info:hover button, .cookie-banner-popup:hover button {
+    display: inline;
+  }
+
+  .cookie-banner-category .switch {
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 17px;
+  }
+  
+  .cookie-banner-category .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .cookie-banner-category .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(196, 44, 44);
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .cookie-banner-category .slider:before {
+    position: absolute;
+    content: "";
+    height: 13px;
+    width: 13px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .cookie-banner-category input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  .cookie-banner-category input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  .cookie-banner-category input:checked + .slider:before {
+    -webkit-transform: translateX(13px);
+    -ms-transform: translateX(13px);
+    transform: translateX(13px);
+  }
+  
+  /* Rounded sliders */
+  .cookie-banner-category .slider.round {
+    border-radius: 17px;
+  }
+  
+  .cookie-banner-category .slider.round:before {
+    border-radius: 50%;
+  }
+  
+  .cookie-banner-category label {
+    margin: 0px 0px 0px 0px;
+  }
+  
+  .cookie-banner-category label .input {
+    margin: 0px 0px 0px 0px;
+  }
+  
+  .cookie-banner-category {
+    padding: 0px;
+  }
+  
+  .cookie-banner-category .switch {
+    display: inline-block;
+    position:relative;
+    top:3px;
+  }
+  
+  .cookie-banner-category .cookie-banner-category-description {
+    color:rgb(121, 119, 119) !important;
+    margin-bottom: 10px;
+  }
+  
+  .cookie-banner-category label {
+    color:black !important;
+  }
+  
+  .cookie-banner-message h2 {
+    color: #2196F3 !important;
+  }
+  
+  .cookie-banner-message p {
+    color:black !important;
+  }
+  
+  .cookie-banner-message div {
+    display:none !important;
+    color:black !important;
+  }
+  
+  .cookie-banner-banner {
+    border-top: 5px solid #2196F3;
+  }
+  
+  .cookie-banner-categories {
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+  }
+  
+  .cookie-banner-withdraw-tab {
+    color:black !important;
+    width: 100% !important;
+    text-align: middle !important;
+  }
+  
+  .title-cookie-banner-message {
+    color:#2196F3 !important;
+  }
+  
+  .cookie-banner-buttons button {
+    background-color: #2196F3;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 10px;
+    border-radius: 5px 5px 5px 5px;
+    font-weight: normal;
+    display: inline;
+    float: right;
+  }
+  
+  .cookie-banner-buttons button:hover {
+    background-color: #c6e5ff;
+    box-shadow: 0px 0px 0px 2px #2196F3 inset;
+    color: #2196F3;
+  }
+  
+  .cookie-banner-buttons {
+    width: 100%;
+    height: 30px;
+    display: block;
+  }
+  
+  .cookie-banner-info-hidden {
+    width: 100%;
+    height: 30px;
+    left: 0px;
+    z-index: 2;
+    font-family: Arial, Helvetica, sans-serif;
+    position: fixed;
+  }
+
+  .cookie-banner-info-hidden button {
+    width: 100%;
+    height: 30px;
+    box-shadow: 0px 0px 0px 2px white inset;
+    border-bottom: 2px solid #2196F3;
+    border-top: 2px solid transparent;
+    text-decoration: none;
+    background: white;
+    background-color: white;
+    display: inline;
+  }

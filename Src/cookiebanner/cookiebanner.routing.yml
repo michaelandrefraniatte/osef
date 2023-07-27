@@ -1,0 +1,31 @@
+cookiebanner.cookiebanner_admin_form:
+  path: '/admin/config/system/cookiebanner'
+  defaults:
+    _form: '\Drupal\cookiebanner\Form\SettingsForm'
+    _title: 'Cookie settings'
+  requirements:
+    _permission: 'administer cookiebanner settings'
+    
+cookiebanner.cookiebanner_cookie_archive:
+  path: '/cookiebanner/archiver'
+  defaults: 
+    _controller: '\Drupal\cookiebanner\Controller\CookieArchive::archiverConsentement'
+  requirements:
+    _format: json
+    _access: 'TRUE'
+
+cookiebanner.cookiebanner_unset_cookie:
+  path: '/cookiebanner/unset'
+  defaults: 
+    _controller: '\Drupal\cookiebanner\Controller\UnsetCookie::unsetCookie'
+  requirements:
+    _format: json
+    _access: 'TRUE'
+
+cookiebanner.cookiebanner_get_cookie:
+  path: '/cookiebanner/get'
+  defaults: 
+    _controller: '\Drupal\cookiebanner\Controller\UnsetCookie::getCookies'
+  requirements:
+    _format: json
+    _access: 'TRUE'

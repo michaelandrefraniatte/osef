@@ -1,0 +1,7 @@
+administer cookiebanner settings:
+  title: 'Administer CookieBanner Settings'
+  description: 'Administer the CookieBanner settings to control the appearance of the popup'
+
+exclude from cookiebanner:
+  title: 'Exclude role from CookieBanner'
+  description: 'Control which roles are excluded from seeing the popup'

@@ -1,0 +1,51 @@
+sudo apt update
+sudo apt install apache2
+sudo systemctl status apache2
+
+sudo apt update
+sudo apt install php libapache2-mod-php
+sudo systemctl restart apache2
+
+sudo apt install mariadb-server
+sudo mysql -u root
+USE mysql;
+UPDATE user SET plugin='' WHERE User='root';
+FLUSH PRIVILEGES;
+exit;
+sudo mysql -u root
+USE mysql;
+CREATE DATABASE db_view;
+USE db_view;
+CREATE TABLE discussion (id INT NOT NULL AUTO_INCREMENT, pseudo VARCHAR(255) NOT NULL, message varchar(255) NOT NULL, PRIMARY KEY (id)) ENGINE=INNODB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1;
+INSERT INTO discussion (pseudo, message) VALUES ('kikix', 'bonjour');
+INSERT INTO discussion (pseudo, message) VALUES ('loulou', 'hi');
+exit;
+
+sudo apt-get install php-twig
+sudo apt-get install php-bz2
+sudo apt-get install php-tcpdf
+sudo apt-get install php-zip
+sudo apt-get install -t buster-backports php-twig
+sudo apt-get install phpmyadmin
+sudo nano /etc/phpmyadmin/config.inc.php 
+$cfg['Servers'][$i]['AllowNoPassword'] = TRUE (x2)
+sudo service apache2 restart
+sudo service mysql restart
+http://127.0.0.1/phpmyadmin/
+
+/etc/apache2/sites-available/osef.conf
+sudo su
+a2ensite
+systemctl reload apache2
+
+sudo chmod -R 755 /var/www/html/
+
+https://myaccount.google.com/lesssecureapps
+http://osef.localhost/mail_view.php
+
+http://osef.localhost/index_controller.php
+
+http://osef.localhost/db_view.php
+
+https://spaces.w3schools.com/createspace
+

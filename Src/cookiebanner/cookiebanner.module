@@ -1,0 +1,258 @@
+<?php
+
+use Drupal\Core\Url;
+
+/**
+ * @file
+ * Contains cookiebanner.module.
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function cookiebanner_theme($existing, $type, $theme, $path) {
+  return [
+    'cookiebanner' => [
+      'variables' => [
+        'message' => '',
+      ],
+    ],
+  ];
+}
+
+/**
+ * Implements hook_page_attachments().
+ */
+function cookiebanner_page_attachments(array &$attachments) {
+
+  // Get BO settings
+  $config = \Drupal::config('cookiebanner.settings');
+
+  // Pass arguments to .js
+  $openclosebutton = $config->get('openclosebutton');
+  $informationtitle = $config->get('informationtitle');
+  $information = $config->get('information');
+  $title = $config->get('title');
+  $cookieactive1 = $config->get('cookieactive1');
+  $cookiename1 = $config->get('cookiename1');
+  $cookiefct1 = $config->get('cookiefct1');
+  $cookiecheck1 = $config->get('cookiecheck1');
+  $cookietitle1 = $config->get('cookietitle1');
+  $cookiedescription1 = $config->get('cookiedescription1');
+  $cookieactive2 = $config->get('cookieactive2');
+  $cookiename2 = $config->get('cookiename2');
+  $cookiefct2 = $config->get('cookiefct2');
+  $cookiecheck2 = $config->get('cookiecheck2');
+  $cookietitle2 = $config->get('cookietitle2');
+  $cookiedescription2 = $config->get('cookiedescription2');
+  $cookieactive3 = $config->get('cookieactive3');
+  $cookiename3 = $config->get('cookiename3');
+  $cookiefct3 = $config->get('cookiefct3');
+  $cookiecheck3 = $config->get('cookiecheck3');
+  $cookietitle3 = $config->get('cookietitle3');
+  $cookiedescription3 = $config->get('cookiedescription3');
+  $cookieactive4 = $config->get('cookieactive4');
+  $cookiename4 = $config->get('cookiename4');
+  $cookiefct4 = $config->get('cookiefct4');
+  $cookiecheck4 = $config->get('cookiecheck4');
+  $cookietitle4 = $config->get('cookietitle4');
+  $cookiedescription4 = $config->get('cookiedescription4');
+  $cookieactive5 = $config->get('cookieactive5');
+  $cookiename5 = $config->get('cookiename5');
+  $cookiefct5 = $config->get('cookiefct5');
+  $cookiecheck5 = $config->get('cookiecheck5');
+  $cookietitle5 = $config->get('cookietitle5');
+  $cookiedescription5 = $config->get('cookiedescription5');
+  $cookieactive6 = $config->get('cookieactive6');
+  $cookiename6 = $config->get('cookiename6');
+  $cookiefct6 = $config->get('cookiefct6');
+  $cookiecheck6 = $config->get('cookiecheck6');
+  $cookietitle6 = $config->get('cookietitle6');
+  $cookiedescription6 = $config->get('cookiedescription6');
+  $cookieactive7 = $config->get('cookieactive7');
+  $cookiename7 = $config->get('cookiename7');
+  $cookiefct7 = $config->get('cookiefct7');
+  $cookiecheck7 = $config->get('cookiecheck7');
+  $cookietitle7 = $config->get('cookietitle7');
+  $cookiedescription7 = $config->get('cookiedescription7');
+  $cookieactive8 = $config->get('cookieactive8');
+  $cookiename8 = $config->get('cookiename8');
+  $cookiefct8 = $config->get('cookiefct8');
+  $cookiecheck8 = $config->get('cookiecheck8');
+  $cookietitle8 = $config->get('cookietitle8');
+  $cookiedescription8 = $config->get('cookiedescription8');
+  $cookieactive9 = $config->get('cookieactive9');
+  $cookiename9 = $config->get('cookiename9');
+  $cookiefct9 = $config->get('cookiefct9');
+  $cookiecheck9 = $config->get('cookiecheck9');
+  $cookietitle9 = $config->get('cookietitle9');
+  $cookiedescription9 = $config->get('cookiedescription9');
+  $cookieactive10 = $config->get('cookieactive10');
+  $cookiename10 = $config->get('cookiename10');
+  $cookiefct10 = $config->get('cookiefct10');
+  $cookiecheck10 = $config->get('cookiecheck10');
+  $cookietitle10 = $config->get('cookietitle10');
+  $cookiedescription10 = $config->get('cookiedescription10');
+  $current_timestamp = $config->get('current_timestamp');
+  $url_archiver = Url::fromRoute('cookiebanner.cookiebanner_cookie_archive')->toString();
+  $lien_redirection = '/user/logout';
+  $user = \Drupal::currentUser()->id();
+  $url_unset = Url::fromRoute('cookiebanner.cookiebanner_unset_cookie')->toString();
+  $url_get = Url::fromRoute('cookiebanner.cookiebanner_get_cookie')->toString();
+
+  // Pass arguments to .js
+  $attachments['#attached']['drupalSettings']['cookiebanner']['openclosebutton'] = $openclosebutton;
+  $attachments['#attached']['drupalSettings']['cookiebanner']['informationtitle'] = $informationtitle;
+  $attachments['#attached']['drupalSettings']['cookiebanner']['information'] = $information;
+  $attachments['#attached']['drupalSettings']['cookiebanner']['title'] = $title;
+  $attachments['#attached']['drupalSettings']['cookiebanner']['cookieactive1'] = $cookieactive1;
+  $attachments['#attached']['drupalSettings']['cookiebanner']['cookiename1'] = $cookiename1;
+  $attachments['#attached']['drupalSettings']['cookiebanner']['cookiefct1'] = $cookiefct1;
+  $attachments['#attached']['drupalSettings']['cookiebanner']['cookiecheck1'] = $cookiecheck1;
+  $attachments['#attached']['drupalSettings']['cookiebanner']['cookietitle1'] = $cookietitle1;
+  $attachments['#attached']['drupalSettings']['cookiebanner']['cookiedescription1'] = $cookiedescription1;
+  $attachments['#attached']['drupalSettings']['cookiebanner']['cookieactive2'] = $cookieactive2;
+  $attachments['#attached']['drupalSettings']['cookiebanner']['cookiename2'] = $cookiename2;
+  $attachments['#attached']['drupalSettings']['cookiebanner']['cookiefct2'] = $cookiefct2;
+  $attachments['#attached']['drupalSettings']['cookiebanner']['cookiecheck2'] = $cookiecheck2;
+  $attachments['#attached']['drupalSettings']['cookiebanner']['cookietitle2'] = $cookietitle2;
+  $attachments['#attached']['drupalSettings']['cookiebanner']['cookiedescription2'] = $cookiedescription2;
+  $attachments['#attached']['drupalSettings']['cookiebanner']['cookieactive3'] = $cookieactive3;
+  $attachments['#attached']['drupalSettings']['cookiebanner']['cookiename3'] = $cookiename3;
+  $attachments['#attached']['drupalSettings']['cookiebanner']['cookiefct3'] = $cookiefct3;
+  $attachments['#attached']['drupalSettings']['cookiebanner']['cookiecheck3'] = $cookiecheck3;
+  $attachments['#attached']['drupalSettings']['cookiebanner']['cookietitle3'] = $cookietitle3;
+  $attachments['#attached']['drupalSettings']['cookiebanner']['cookiedescription3'] = $cookiedescription3;
+  $attachments['#attached']['drupalSettings']['cookiebanner']['cookieactive4'] = $cookieactive4;
+  $attachments['#attached']['drupalSettings']['cookiebanner']['cookiename4'] = $cookiename4;
+  $attachments['#attached']['drupalSettings']['cookiebanner']['cookiefct4'] = $cookiefct4;
+  $attachments['#attached']['drupalSettings']['cookiebanner']['cookiecheck4'] = $cookiecheck4;
+  $attachments['#attached']['drupalSettings']['cookiebanner']['cookietitle4'] = $cookietitle4;
+  $attachments['#attached']['drupalSettings']['cookiebanner']['cookiedescription4'] = $cookiedescription4;
+  $attachments['#attached']['drupalSettings']['cookiebanner']['cookieactive5'] = $cookieactive5;
+  $attachments['#attached']['drupalSettings']['cookiebanner']['cookiename5'] = $cookiename5;
+  $attachments['#attached']['drupalSettings']['cookiebanner']['cookiefct5'] = $cookiefct5;
+  $attachments['#attached']['drupalSettings']['cookiebanner']['cookiecheck5'] = $cookiecheck5;
+  $attachments['#attached']['drupalSettings']['cookiebanner']['cookietitle5'] = $cookietitle5;
+  $attachments['#attached']['drupalSettings']['cookiebanner']['cookiedescription5'] = $cookiedescription5;
+  $attachments['#attached']['drupalSettings']['cookiebanner']['cookieactive6'] = $cookieactive6;
+  $attachments['#attached']['drupalSettings']['cookiebanner']['cookiename6'] = $cookiename6;
+  $attachments['#attached']['drupalSettings']['cookiebanner']['cookiefct6'] = $cookiefct6;
+  $attachments['#attached']['drupalSettings']['cookiebanner']['copenclosebuttonookiecheck6'] = $cookiecheck6;
+  $attachments['#attached']['drupalSettings']['cookiebanner']['cookietitle6'] = $cookietitle6;
+  $attachments['#attached']['drupalSettings']['cookiebanner']['cookiedescription6'] = $cookiedescription6;
+  $attachments['#attached']['drupalSettings']['cookiebanner']['cookieactive7'] = $cookieactive7;
+  $attachments['#attached']['drupalSettings']['cookiebanner']['cookiename7'] = $cookiename7;
+  $attachments['#attached']['drupalSettings']['cookiebanner']['cookiefct7'] = $cookiefct7;
+  $attachments['#attached']['drupalSettings']['cookiebanner']['cookiecheck7'] = $cookiecheck7;
+  $attachments['#attached']['drupalSettings']['cookiebanner']['cookietitle7'] = $cookietitle7;
+  $attachments['#attached']['drupalSettings']['cookiebanner']['cookiedescription7'] = $cookiedescription7;
+  $attachments['#attached']['drupalSettings']['cookiebanner']['cookieactive8'] = $cookieactive8;
+  $attachments['#attached']['drupalSettings']['cookiebanner']['cookiename8'] = $cookiename8;
+  $attachments['#attached']['drupalSettings']['cookiebanner']['cookiefct8'] = $cookiefct8;
+  $attachments['#attached']['drupalSettings']['cookiebanner']['cookiecheck8'] = $cookiecheck8;
+  $attachments['#attached']['drupalSettings']['cookiebanner']['cookietitle8'] = $cookietitle8;
+  $attachments['#attached']['drupalSettings']['cookiebanner']['cookiedescription8'] = $cookiedescription8;
+  $attachments['#attached']['drupalSettings']['cookiebanner']['cookieactive9'] = $cookieactive9;
+  $attachments['#attached']['drupalSettings']['cookiebanner']['cookiename9'] = $cookiename9;
+  $attachments['#attached']['drupalSettings']['cookiebanner']['cookiefct9'] = $cookiefct9;
+  $attachments['#attached']['drupalSettings']['cookiebanner']['cookiecheck9'] = $cookiecheck9;
+  $attachments['#attached']['drupalSettings']['cookiebanner']['cookietitle9'] = $cookietitle9;
+  $attachments['#attached']['drupalSettings']['cookiebanner']['cookiedescription9'] = $cookiedescription9;
+  $attachments['#attached']['drupalSettings']['cookiebanner']['cookieactive10'] = $cookieactive10;
+  $attachments['#attached']['drupalSettings']['cookiebanner']['cookiename10'] = $cookiename10;
+  $attachments['#attached']['drupalSettings']['cookiebanner']['cookiefct10'] = $cookiefct10;
+  $attachments['#attached']['drupalSettings']['cookiebanner']['cookiecheck10'] = $cookiecheck10;
+  $attachments['#attached']['drupalSettings']['cookiebanner']['cookietitle10'] = $cookietitle10;
+  $attachments['#attached']['drupalSettings']['cookiebanner']['cookiedescription10'] = $cookiedescription10;
+  $attachments['#attached']['drupalSettings']['cookiebanner']['current_timestamp'] = $current_timestamp;
+  $attachments['#attached']['drupalSettings']['cookiebanner']['url_archiver'] = $url_archiver;
+  $attachments['#attached']['drupalSettings']['cookiebanner']['lien_redirection'] = $lien_redirection;
+  $attachments['#attached']['drupalSettings']['cookiebanner']['user'] = $user;
+  $attachments['#attached']['drupalSettings']['cookiebanner']['url_unset'] = $url_unset;
+  $attachments['#attached']['drupalSettings']['cookiebanner']['url_get'] = $url_get;
+
+  // Attach libraries
+  $attachments['#attached']['library'][] = 'cookiebanner/cookiebanner';
+
+  // Create template
+  $element = [
+      '#theme' => 'cookiebanner',
+      '#message' => [
+        'openclosebutton' => $openclosebutton,
+        'informationtitle' => $informationtitle,
+        'information' => $information,
+        'title' => $title,
+        'cookieactive1' => $cookieactive1,
+        'cookiename1' => $cookiename1,
+        'cookiefct1' => $cookiefct1,
+        'cookiecheck1' => $cookiecheck1,
+        'cookietitle1' => $cookietitle1,
+        'cookiedescription1' => $cookiedescription1,
+        'cookieactive2' => $cookieactive2,
+        'cookiename2' => $cookiename2,
+        'cookiefct2' => $cookiefct2,
+        'cookiecheck2' => $cookiecheck2,
+        'cookietitle2' => $cookietitle2,
+        'cookiedescription2' => $cookiedescription2,
+        'cookieactive3' => $cookieactive3,
+        'cookiename3' => $cookiename3,
+        'cookiefct3' => $cookiefct3,
+        'cookiecheck3' => $cookiecheck3,
+        'cookietitle3' => $cookietitle3,
+        'cookiedescription3' => $cookiedescription3,
+        'cookieactive4' => $cookieactive4,
+        'cookiename4' => $cookiename4,
+        'cookiefct4' => $cookiefct4,
+        'cookiecheck4' => $cookiecheck4,
+        'cookietitle4' => $cookietitle4,
+        'cookiedescription4' => $cookiedescription4,
+        'cookieactive5' => $cookieactive5,
+        'cookiename5' => $cookiename5,
+        'cookiefct5' => $cookiefct5,
+        'cookiecheck5' => $cookiecheck5,
+        'cookietitle5' => $cookietitle5,
+        'cookiedescription5' => $cookiedescription5,
+        'cookieactive6' => $cookieactive6,
+        'cookiename6' => $cookiename6,
+        'cookiefct6' => $cookiefct6,
+        'cookiecheck6' => $cookiecheck6,
+        'cookietitle6' => $cookietitle6,
+        'cookiedescription6' => $cookiedescription6,
+        'cookieactive7' => $cookieactive7,
+        'cookiename7' => $cookiename7,
+        'cookiefct7' => $cookiefct7,
+        'cookiecheck7' => $cookiecheck7,
+        'cookietitle7' => $cookietitle7,
+        'cookiedescription7' => $cookiedescription7,
+        'cookieactive8' => $cookieactive8,
+        'cookiename8' => $cookiename8,
+        'cookiefct8' => $cookiefct8,
+        'cookiecheck8' => $cookiecheck8,
+        'cookietitle8' => $cookietitle8,
+        'cookiedescription8' => $cookiedescription8,
+        'cookieactive9' => $cookieactive9,
+        'cookiename9' => $cookiename9,
+        'cookiefct9' => $cookiefct9,
+        'cookiecheck9' => $cookiecheck9,
+        'cookietitle9' => $cookietitle9,
+        'cookiedescription9' => $cookiedescription9,
+        'cookieactive10' => $cookieactive10,
+        'cookiename10' => $cookiename10,
+        'cookiefct10' => $cookiefct10,
+        'cookiecheck10' => $cookiecheck10,
+        'cookietitle10' => $cookietitle10,
+        'cookiedescription10' => $cookiedescription10,
+        'current_timestamp' => $current_timestamp,
+        'url_archiver' => $url_archiver,
+        'lien_redirection' => $lien_redirection,
+        'user' => $user,
+        'url_unset' => $url_unset,
+        'url_get' => $url_get,
+      ]
+  ];
+
+  $attachments['#attached']['drupalSettings']['cookiebanner']['markup'] = (string)\Drupal::service('renderer')->renderPlain($element);
+  
+}
+

@@ -1,0 +1,13 @@
+{
+    "name": "sima/cookiebanner",
+    "description": "CookieBanner uses the Cookie Banner javascript library for alerting users about the use of cookies on your website",
+    "type": "drupal-custom-module",
+    "authors": [
+        {
+            "name": "Equipe PV3",
+            "email": "equipe.pv3@giesima.fr"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}

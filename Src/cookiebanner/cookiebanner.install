@@ -1,0 +1,160 @@
+<?php
+
+/**
+ * @file
+ * Installation / Mise à jour du module.
+ */
+
+/**
+ * Schéma de la BD.
+ *
+ * @return array
+ *   Schéma
+ */
+function cookiebanner_schema() {
+  $schema['cookiebanner'] = [
+    'description' => 'Table de l\'archivage des choix RGPD',
+    'fields' => [
+      'username' => [
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'description' => 'Account name',
+      ],
+      'clientIP' => [
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'description' => 'IP du client',
+      ],
+      'date' => [
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'description' => 'Date à laquelle le choix a été validé',
+      ],
+      'cookie1' => [
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'description' => 'Nom informatique du cookie',
+      ],
+      'consent1' => [
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'description' => 'Valeur du consentement',
+      ],
+      'cookie2' => [
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'description' => 'Nom informatique du cookie',
+      ],
+      'consent2' => [
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'description' => 'Valeur du consentement',
+      ],
+      'cookie3' => [
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'description' => 'Nom informatique du cookie',
+      ],
+      'consent3' => [
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'description' => 'Valeur du consentement',
+      ],
+      'cookie4' => [
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'description' => 'Nom informatique du cookie',
+      ],
+      'consent4' => [
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'description' => 'Valeur du consentement',
+      ],
+      'cookie5' => [
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'description' => 'Nom informatique du cookie',
+      ],
+      'consent5' => [
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'description' => 'Valeur du consentement',
+      ],
+      'cookie6' => [
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'description' => 'Nom informatique du cookie',
+      ],
+      'consent6' => [
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'description' => 'Valeur du consentement',
+      ],
+      'cookie7' => [
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'description' => 'Nom informatique du cookie',
+      ],
+      'consent7' => [
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'description' => 'Valeur du consentement',
+      ],
+      'cookie8' => [
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'description' => 'Nom informatique du cookie',
+      ],
+      'consent8' => [
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'description' => 'Valeur du consentement',
+      ],
+      'cookie9' => [
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'description' => 'Nom informatique du cookie',
+      ],
+      'consent9' => [
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'description' => 'Valeur du consentement',
+      ],
+      'cookie10' => [
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'description' => 'Nom informatique du cookie',
+      ],
+      'consent10' => [
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'description' => 'Valeur du consentement',
+      ],
+    ],
+  ];
+  return $schema;
+}
+

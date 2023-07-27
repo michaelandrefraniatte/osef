@@ -1,0 +1,7 @@
+cookiebanner.cookiebanner_admin_form:
+  title: 'Cookie settings'
+  route_name: cookiebanner.cookiebanner_admin_form
+  description: 'Setup the configuration for the CookieBanner module'
+  parent: system.admin_config_system
+  weight: 99
+
